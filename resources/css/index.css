@@ -1,8 +1,21 @@
 * {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Georgia, "Time New Roman", serif;
+    color: black
 }
   
   
-h1 {
+.title{
     color: SeaGreen;
+    text-align: center;
+    font-weight: bold;
+}
+
+.languages{
+    color: black;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.project-title {
+    font-weight: bold;
 }
