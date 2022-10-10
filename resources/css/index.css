@@ -1,21 +1,105 @@
+
 * {
-    font-family: Georgia, "Time New Roman", serif;
-    color: black
+    font-family:  serif;
+    font-weight: lighter;
+    color: black;
 }
   
-  
-.title{
-    color: SeaGreen;
+canvas {
+    position:absolute;
+    width:100%;
+    height:100%;
+}  
+
+.jumbotron , body, html{
+    background-image: url(../waterfall.gif);
+    border:black solid;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+div, .title{
+    color: whitesmoke;
     text-align: center;
     font-weight: bold;
+    border: white solid;
+    position: relative;
+    top: 100px;
+    width: 400px;
+    margin: 0 auto;
 }
 
 .languages{
-    color: black;
+    color: white;
     text-align: center;
     font-weight: lighter;
+    position: relative;
+    top: 115px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.social li {
+    background-color: #9DD1F1;
+    border-radius: 3px;
+    color: #004E89;
+    font-size: 16px;
+    margin: 10px;
+    padding: 12px;
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    list-style: none;
+    display: inline-block;
+}
+
+.navigation li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 12px;
 }
 
 .project-title {
     font-weight: bold;
+}
+
+.project-box {
+    padding: 5px; 
+    border: solid red;
+    width: 75%;
+}
+
+.project-intro {
+    font-weight: bold;
+}
+
+.project {
+    padding: 5px; 
+    border: solid red;
+    display: inline-block;
+    position: relative;
+}
+
+.maker {
+    resize: 10%;
+    display: inline-block;
+    max-height: 250px;
+    position: relative;
+}
+
+.footer {
+    padding: 60px 0px;
+    background-color: #000;
+}
+
+.footer p {
+    color: #fff;
+    font-size:12px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    text-align: left;
 }
