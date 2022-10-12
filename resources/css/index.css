@@ -4,14 +4,14 @@
     font-weight: lighter;
     color: black;
 }
-  
-canvas {
-    position:absolute;
-    width:100%;
-    height:100%;
-}  
 
-.jumbotron , body, html{
+body, html {
+    height: 100%;
+    border: 0;
+    margin: 0;
+}
+
+.jumbotron {
     background-image: url(../waterfall.gif);
     border:black solid;
     width: 100%;
@@ -27,8 +27,8 @@ div, .title{
     font-weight: bold;
     border: white solid;
     position: relative;
-    top: 100px;
-    width: 400px;
+    top: 45%;
+    width: 20%;
     margin: 0 auto;
 }
 
@@ -37,19 +37,25 @@ div, .title{
     text-align: center;
     font-weight: lighter;
     position: relative;
-    top: 115px;
-    width: 400px;
+    top: 46%;
+    width: 50%;
     margin: 0 auto;
+}
+
+.social {
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .social li {
     background-color: #9DD1F1;
-    border-radius: 3px;
+
     color: #004E89;
     font-size: 16px;
     margin: 10px;
     padding: 12px;
-    text-align: right;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -57,8 +63,17 @@ div, .title{
     display: inline-block;
 }
 
+.navigation {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .navigation li {
     list-style: none;
+    display: inline-flex;
+    padding: 0 12px;
+    justify-content: space-around;
     display: inline-block;
     padding: 0 12px;
 }
@@ -91,9 +106,19 @@ div, .title{
     position: relative;
 }
 
+.monkey {
+    resize: 10%;
+    display: inline-block;
+    max-height: 250px;
+    position: relative;
+}
+
 .footer {
-    padding: 60px 0px;
+    padding: 20px 0px;
     background-color: #000;
+    width: 100%;
+    height: fit-content;
+    display: block;
 }
 
 .footer p {
