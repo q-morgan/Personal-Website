@@ -1,27 +1,38 @@
-
 * {
-    font-family:  serif;
+    font-family: serif;
     font-weight: lighter;
     color: black;
 }
 
-body, html {
-    height: 100%;
-    border: 0;
-    margin: 0;
+.container {
+    display: grid;
+    position: relative;
+    margin: 0 auto;
+    grid-template-areas:"header header" 
+                        "social social"
+                        "nav nav" 
+                        "left right" 
+                        "footer footer";
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 90vh 10vh 10vh auto 20vh;
 }
-
-.jumbotron {
+  
+h1, h2 {
+    font-family: monospace;
+    text-align: center;
+}
+  
+header {
     background-image: url(../waterfall.gif);
-    border:black solid;
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: bottom center;
+    background-position: center;
     background-repeat: no-repeat;
+    grid-area: header;
 }
-
-div, .title{
+  
+div .title{
     color: whitesmoke;
     text-align: center;
     font-weight: bold;
@@ -43,30 +54,101 @@ div, .title{
 }
 
 .social {
-    display: flex;
-    width: 100%;
     justify-content: center;
+    align-items: center;
+    grid-area: social;
 }
 
-.social li {
-    background-color: #9DD1F1;
-
-    color: #004E89;
-    font-size: 16px;
-    margin: 10px;
-    padding: 12px;
+.social li{
+    color: #FFF;
+    margin: 0 100px;
+    padding: 15px;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
+    border: #FFF solid;
 
     list-style: none;
     display: inline-block;
 }
 
+nav {
+    background-color: beige;
+    grid-area: nav;
+}
+  
+.left {
+    background-color: royalblue;
+    color: white;
+    grid-area: left;
+}
+  
+.right {
+    background-color: beige;
+    grid-area: right;
+}
+  
+footer {
+    background-color: black;
+    grid-area: footer;
+    padding: 20px 40px;
+}
+
+footer p {
+    color: #fff;
+    font-size:12px;
+    margin: 5px 20px;
+    text-align: left;
+}
+
+
+
+/*
+* {
+    font-family:  serif;
+    font-weight: lighter;
+    color: black;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    position: relative;
+    margin: 0 auto;
+    grid-template-areas:"header header"
+                        "social social"
+                        "nav nav" 
+                        "left right" 
+                        "footer footer";
+    grid-template-columns: 1fr 3fr;
+  }
+
+li {
+    list-style: none;
+}
+
+.jumbotron {
+    background-image: url(../waterfall.gif);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-area: header;
+}
+
+
+
+
+
 .navigation {
     display: flex;
     width: 100%;
     justify-content: center;
+    grid-area: nav;
 }
 
 .navigation li {
@@ -75,7 +157,6 @@ div, .title{
     padding: 0 12px;
     justify-content: space-around;
     display: inline-block;
-    padding: 0 12px;
 }
 
 .project-title {
@@ -86,6 +167,7 @@ div, .title{
     padding: 5px; 
     border: solid red;
     width: 75%;
+    grid-area: right;
 }
 
 .project-intro {
@@ -118,13 +200,9 @@ div, .title{
     background-color: #000;
     width: 100%;
     height: fit-content;
-    display: block;
+    grid-area: footer;
 }
 
-.footer p {
-    color: #fff;
-    font-size:12px;
-    margin-bottom: 0;
-    margin-left: 20px;
-    text-align: left;
-}
+
+
+*/
