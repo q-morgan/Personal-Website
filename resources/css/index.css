@@ -1,24 +1,22 @@
 * {
     font-family: serif;
     font-weight: lighter;
-    color: black;
 }
 
 .container {
     display: grid;
     position: relative;
-    margin: 0 auto;
+    margin: 0 0;
     grid-template-areas:"header header" 
                         "social social"
                         "nav nav" 
                         "left right" 
                         "footer footer";
     grid-template-columns: 2fr 4fr;
-    grid-template-rows: 90vh 10vh 10vh auto 20vh;
+    grid-template-rows: 85vh auto auto auto 20vh;
 }
   
 h1, h2 {
-    font-family: monospace;
     text-align: center;
 }
   
@@ -32,7 +30,7 @@ header {
     grid-area: header;
 }
   
-div .title{
+div .name{
     color: whitesmoke;
     text-align: center;
     font-weight: bold;
@@ -53,44 +51,100 @@ div .title{
     margin: 0 auto;
 }
 
-.social {
-    justify-content: center;
-    align-items: center;
+.social{
     grid-area: social;
 }
 
-.social li{
-    color: #FFF;
-    margin: 0 100px;
+.social ul {
+    list-style: none;
+    margin: 0 5;
+    padding: 0 5;
+    text-align: center;
+}
+
+.social li {
+    display: inline;
+    margin-right: 5vw;
+         
+}
+
+.social li:last-child {
+    border-left: 5vw;
+} 
+
+.social li img {
     padding: 15px;
     text-align: center;
-    text-decoration: none;
-    border: #FFF solid;
-
-    list-style: none;
-    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
 }
 
 nav {
-    background-color: beige;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
     grid-area: nav;
 }
-  
-.left {
-    background-color: royalblue;
-    color: white;
+
+nav li {
+    padding: 0 12px;
+    text-align: center;
+    text-decoration: none;
+    justify-content: space-around;
+    
+
+    list-style: none;
+    display: inline-block;
+    
+    border-right: 1px solid #bbb;      
+}
+
+nav li:last-child {
+    border-right: none;
+}  
+
+nav li a {
+    color: lightgrey;
+}
+
+.info {
+    background-color: #264e7a;
+    color: lightgrey;
+    padding: 5px;
     grid-area: left;
 }
-  
-.right {
-    background-color: beige;
-    grid-area: right;
+
+.info p {
+    padding: 0;
+    margin: 0;
 }
   
+.projects {
+    padding: 0 10px;
+    background-color: #a5a5b8;
+    grid-area: right;
+}
+
+.project-image {
+    resize: 10%;
+    display: inline-block;
+    max-height: 250px; 
+}
+
 footer {
     background-color: black;
     grid-area: footer;
     padding: 20px 40px;
+}
+
+footer h2 {
+    color: #fff;
+    margin: 5px 20px;
+    text-align: left;
 }
 
 footer p {
@@ -99,110 +153,3 @@ footer p {
     margin: 5px 20px;
     text-align: left;
 }
-
-
-
-/*
-* {
-    font-family:  serif;
-    font-weight: lighter;
-    color: black;
-}
-
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-.container {
-    display: grid;
-    position: relative;
-    margin: 0 auto;
-    grid-template-areas:"header header"
-                        "social social"
-                        "nav nav" 
-                        "left right" 
-                        "footer footer";
-    grid-template-columns: 1fr 3fr;
-  }
-
-li {
-    list-style: none;
-}
-
-.jumbotron {
-    background-image: url(../waterfall.gif);
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    grid-area: header;
-}
-
-
-
-
-
-.navigation {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    grid-area: nav;
-}
-
-.navigation li {
-    list-style: none;
-    display: inline-flex;
-    padding: 0 12px;
-    justify-content: space-around;
-    display: inline-block;
-}
-
-.project-title {
-    font-weight: bold;
-}
-
-.project-box {
-    padding: 5px; 
-    border: solid red;
-    width: 75%;
-    grid-area: right;
-}
-
-.project-intro {
-    font-weight: bold;
-}
-
-.project {
-    padding: 5px; 
-    border: solid red;
-    display: inline-block;
-    position: relative;
-}
-
-.maker {
-    resize: 10%;
-    display: inline-block;
-    max-height: 250px;
-    position: relative;
-}
-
-.monkey {
-    resize: 10%;
-    display: inline-block;
-    max-height: 250px;
-    position: relative;
-}
-
-.footer {
-    padding: 20px 0px;
-    background-color: #000;
-    width: 100%;
-    height: fit-content;
-    grid-area: footer;
-}
-
-
-
-*/
