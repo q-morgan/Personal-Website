@@ -112,7 +112,7 @@ nav li a {
 }
 
 .info {
-    background-color: #264e7a;
+    background-color: #1d1d1d91;
     color: lightgrey;
     padding: 5px;
     grid-area: left;
@@ -125,7 +125,7 @@ nav li a {
   
 .projects {
     padding: 0 10px;
-    background-color: #a5a5b8;
+    background-color: #ffffff;
     grid-area: right;
 }
 
